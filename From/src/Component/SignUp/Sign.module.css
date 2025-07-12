@@ -1,0 +1,306 @@
+body{
+  margin: 0;
+  background: linear-gradient(135deg, #140824, #13052c);
+}
+
+
+.formContainer {
+  display: flex;
+  max-width: 850px;
+  height: 500px;
+  margin: 50px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #191025, #4100bb);
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(139, 92, 246, 0.25);
+  box-shadow:
+       inset 0 0 12px rgba(168, 85, 247, 0.2),
+    0 0 20px rgba(168, 85, 247, 0.4),
+    0 0 30px rgba(168, 85, 247, 0.6);
+  transition: all 0.4s ease;
+  animation: glowPulse 3s infinite;
+}
+
+.formContainer:hover {
+  box-shadow:
+    inset 0 0 12px rgba(168, 85, 247, 0.2),
+    0 0 20px rgba(168, 85, 247, 0.4),
+    0 0 30px rgba(168, 85, 247, 0.6);
+  border-color: #a855f7;
+}
+
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+}
+
+
+.rightPanel {
+  background: rgba(255, 255, 255, 0.02);
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 80%;
+}
+
+.formTitle {
+  font-size: 24px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #d8b4fe;
+}
+
+.inputBox {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 14px 14px 14px 45px;
+  border: 2px solid rgba(168, 85, 247, 0.3);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #f3e8ff;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.inputBox input:focus {
+  border-color: #a855f7;
+  box-shadow: 0 0 10px #a855f7;
+}
+
+.icon {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  color: #c084fc;
+  font-size: 16px;
+}
+
+.submitBtn {
+  width: 100%;
+  background: transparent;
+  border: 2px solid #a855f7;
+  color: #a855f7;
+  padding: 12px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  background: #a855f7;
+  color: #fff;
+  box-shadow: 0 0 12px #a855f7;
+}
+
+.switchText {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #d8b4fe;
+}
+
+.link {
+  color: #c084fc;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.successBox {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.profileIcon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(160deg, #3a0994, #040105); /* Royal purple to pink */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 36px;
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 16px;
+    box-sizing: border-box;
+  }
+
+  .leftPanel,
+  .rightPanel {
+    width: 100%;
+    padding: 20px;
+    flex: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .formTitle {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .inputBox {
+    position: relative;
+    margin-bottom: 18px;
+  }
+
+  .inputBox input {
+    width: 92%;
+    padding: 10px 10px 10px 42px; /* 👈 enough space for icon */
+    font-size: 14px;
+    margin: 0 auto;
+    display: block;
+    background: rgba(255, 255, 255, 0.05);
+    color: #f3e8ff;
+    border: 2px solid rgba(168, 85, 247, 0.3);
+    border-radius: 12px;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.3s;
+  }
+
+  .inputBox input:focus {
+    border-color: #a855f7;
+    box-shadow: 0 0 10px #a855f7;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translateY(-50%);
+    color: #c084fc;
+    font-size: 16px;
+    pointer-events: none;
+  }
+
+  .submitBtn {
+    padding: 10px;
+    font-size: 14px;
+    width: 92%;
+    margin: 10px auto 0;
+    display: block;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid #a855f7;
+    color: #a855f7;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .submitBtn:hover {
+    background: #a855f7;
+    color: #fff;
+    box-shadow: 0 0 12px #a855f7;
+  }
+
+  .switchText {
+    font-size: 13px;
+    margin-top: 15px;
+    text-align: center;
+    color: #d8b4fe;
+  }
+
+  .link {
+    font-weight: bold;
+    color: #c084fc;
+    cursor: pointer;
+  }
+
+  .successBox {
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .profileIcon {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+  background: linear-gradient(160deg, #3a0994, #040105); /* Royal purple to pink */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+}
+
+@media (max-width: 480px) {
+  .formContainer {
+    width: 95%;
+    margin: 20px auto;
+    padding: 16px;
+  }
+
+  .formTitle {
+    font-size: 18px;
+  }
+
+  .inputBox input {
+    font-size: 13px;
+    padding: 10px 10px 10px 40px;
+    
+  }
+
+  .icon {
+    font-size: 14px;
+    left: 10px;
+    padding-left: 10px;
+  }
+
+  .submitBtn {
+    font-size: 13px;
+    padding: 9px;
+  }
+
+  .switchText {
+    font-size: 12px;
+  }
+
+  .profileIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+}

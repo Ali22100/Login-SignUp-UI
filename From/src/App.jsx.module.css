@@ -1,0 +1,55 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  color: #fff;
+  text-align: center;
+}
+
+.toggle {
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+
+.toggle button {
+  background: none;
+  border: none;
+  color: #ffdd57;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 6px;
+  transition: color 0.3s;
+}
+
+.toggle button:hover {
+  color: #ffffff;
+}
+
+.logoutBtn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.logoutBtn:hover {
+  background: #c0392b;
+}
